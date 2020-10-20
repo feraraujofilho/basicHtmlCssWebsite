@@ -6,6 +6,14 @@
 * {
     margin: 0;
     font-family: Poppins, sans-serif;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 400px) {
+    * {
+        margin: 0;
+        font-size: 8px
+    }
 }
 
 .header {
@@ -13,6 +21,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,8 +29,8 @@
 }
 
 .header-container{
-    width: 800px;
-    height: 700px;
+    max-width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -30,10 +39,10 @@
 }
 
 .header-button {
-    padding: 15px 75px;
+    padding: 1em 4em;
     background-color: white;
     border: 0;
-    font-size: 22px;
+    font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
 }
@@ -43,22 +52,22 @@
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 4em;
     text-align: center;
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 3.5em;
     padding-bottom: 10px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 2em;
     font-weight: bold;
 }
 
 .categories {
-    padding: 80px;
+    padding: 5em;
 }
 
 .grid-container {
@@ -67,24 +76,34 @@ p {
     'firstleft firstleft firstright firstright firstright firstright'
     'middle middle middle middle middle middle'
     'footerleft footerleft footerleft footerleft footerright footerright';
-    grid-gap: 30px;
+    grid-gap: 1em;
     background-color: #fff;
 }
 
 .grid-container > div {
     height: 400px;
-    padding: 30px;
+    padding: 2em;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     display: flex;
     flex-direction: column;
-    
+}
 
+@media only screen and (max-width: 400px) {
+    .grid-container > div {
+        max-height: 200px;
+        padding: 2em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .categories-header {
-    margin-bottom: 80px;
+    margin-bottom: 5em;
 }
 
 .first-row-left{
@@ -118,7 +137,7 @@ p {
 
 
 .plans {
-    padding: 80px;
+    padding: 5em;
     background-color: #f2f2f2;
 }
 
@@ -127,11 +146,28 @@ p {
     position: absolute;
 }
 
+@media only screen and (max-width: 1025px) {
+    .plans-header {
+        z-index: 0;
+        position: relative;
+        margin-bottom: 5em;
+    }
+}
+
 .plans-block{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     z-index: -1;
+}
+
+@media only screen and (max-width: 1025px) {
+    .plans-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .plans-block > div {
@@ -146,7 +182,7 @@ p {
 }
 
 .plan-description-block > p {
-    padding: 20px;
+    padding: 1.5em;
     background-color: #0088ED;
     color: white;
     font-size: 14px;
